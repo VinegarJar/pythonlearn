@@ -9,11 +9,14 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
 
 import { connect } from "react-redux";
-import { getHomeAdver } from './src/actions';
+import { getHomeAdver } from './reducers/postAction';
+import PropTypes from "prop-types"
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -28,26 +31,38 @@ class App extends Component {
 
 
 
-      //发送网络请求
-      componentDidMount(){
-      //   // this.requestNetwork();
-      //   this.props.getHomeAdver({}).then((res) => {
-      //   console.log("获取经营范围数据===============", res);
-          
-      //  }).catch((error) => {
-          
-      //  });
+  //发送网络请求
+  componentDidMount() {
+    // this.requestNetwork();
+    //   this.props.getHomeAdver({}).then((res) => {
+    //   console.log("获取经营范围数据===============", res);
 
+    //  }).catch((error) => {
 
-    }
+    //  });
+    this.props.getHomeAdver();
+
+    // this.props.getHomeAdver().then((res) => {
+    //   console.log("获取经营范围数据===============", res);
+
+    //  }).catch((error) => {
+
+    //  });
+
+  }
 
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <TouchableOpacity
+          activeOpacity={1}
+          onPress={() => this.backToTop()}>
+
+          <Text style={styles.welcome}>
+            Welcome to React Native!
         </Text>
+        </TouchableOpacity>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>
@@ -57,6 +72,12 @@ class App extends Component {
       </View>
     );
   }
+
+  backToTop(){
+  
+    console.log("this.props.post=======>",this.props.post)
+    
+}
 
 
 }
@@ -80,13 +101,25 @@ const styles = StyleSheet.create({
   },
 });
 
+//方式一
+PropTypes.props = {
+  getHomeAdver:PropTypes.func.isRequired,
+  post:PropTypes.object.isRequired,
+}
 
 const mapStatetoProps = (state, props) => ({
-  user: state.user,
+  post: state.post,
 });
+export default connect(mapStatetoProps,{ getHomeAdver})(App);
 
-const mapDispatchToProps = dispatch => ({
-      getHomeAdver: (params) => dispatch(getHomeAdver(params)),
-});
 
-export default connect(mapStatetoProps, mapDispatchToProps)(App);
+//方式二
+// const mapStatetoProps = (state, props) => ({
+//   post: state.post,
+// });
+
+// const mapDispatchToProps = dispatch => ({
+//   getHomeAdver: () => dispatch(getHomeAdver()),
+// });
+
+// export default connect(mapStatetoProps, mapDispatchToProps)(App);

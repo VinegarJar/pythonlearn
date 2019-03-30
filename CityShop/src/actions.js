@@ -1,4 +1,5 @@
 import StoreTypes from "./types";
+//import ZeroAppServer from "../ZeroTool/ZeroAppServer"
 const  {GET_HOMEADVER } = StoreTypes;
 
 
@@ -16,9 +17,12 @@ export async function getHomeAdver(params) {
          "titel":"首页广告数据", 
     };
 
-
-    return {
-        type:GET_HOMEADVER,
-        data:data,
-    }
+    // dispatch({
+    //     type:GET_HOMEADVER,
+    //     data:data,
+    // })
+    // return {
+    //     type:GET_HOMEADVER,
+    //     data:data,
+    // }
 }
