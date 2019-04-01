@@ -52,3 +52,36 @@ allprojects {
 --------------------- 
 3.android出现这个undefined is not an object (evaluating 'RNFetchBlob.DocumentDir')
 https://www.cnblogs.com/details-666/p/react-native-fetch-blob.html
+
+
+4.解决出现Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.
+Warning:Configuration 'compile' is obsolete and has been replaced with 'implementation'. It will be
+
+**Warning:Configuration ‘compile’ is obsolete and has been replaced with ‘implementation’. 
+It will be removed at the end of 2018** 
+compile会被在2018年底取消，会被api替代，原来只是警告，今天用发现编译报错直接过不去了。
+
+解决方法：
+
+  将build.gradle(Module.app)中dependencies的compile换成implementation 即可。如下所示：
+dependencies {
+implementation fileTree(dir: 'libs', include: ['*.jar'])
+implementation 'com.android.support:appcompat-v7:22.0.0'
+implementation files('libs/Msc.jar')
+implementation files('libs/Sunflower.jar')
+} 
+关于compile与implementation的区别。
+
+compile： 
+可以传递依赖引用，编译时间相对来说长久一些
+
+implementation： 
+不可传递依赖引用，比如，B依赖A，C再依赖B,C却不能依赖A的引用或者依赖。当然他的编译时间就会短一些。
+
+对于api代替compile,他们功能相同。
+--------------------- 
+作者：dahaiChang 
+来源：CSDN 
+原文：https://blog.csdn.net/u010194538/article/details/80261125 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
