@@ -16,7 +16,7 @@ import {
 import { connect } from "react-redux";
 import { getHomeAdver } from './reducers/postAction';
 import PropTypes from "prop-types"
-
+import {CachedImage} from "react-native-img-cache";
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -69,6 +69,9 @@ class App extends Component {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+        <CachedImage 
+         style={{width:100,height:100}}
+        source={{ uri: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554109606585&di=e7d16141b734c59b60236165cb81504e&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fae301becc97016fde8f4178239c258263b44f5e08d1e-L7CDKh_fw658" }} mutable />
       </View>
     );
   }

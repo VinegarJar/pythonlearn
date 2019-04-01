@@ -1,0 +1,54 @@
+1.React-native安卓打包出现Execution failed for task ':react-native-fetch-blob:verifyReleaseResources
+2018年12月19日 08:38:17 飞向Hadoop 阅读数：337
+原因：项目的gradle版本升级了导致第三方插件无法打包
+解决方法：从node_modules文件夹中找到 react-native-fetch-blob/android/build.gradle ，并修改如下部分
+compileSdkVersion 23
+buildToolsVersion "23.0.3"
+defaultConfig {
+minSdkVersion 16
+targetSdkVersion 23
+versionCode 1
+versionName "1.0"
+}
+
+改为
+
+compileSdkVersion 26
+buildToolsVersion "26.0.3"
+defaultConfig {
+minSdkVersion 16
+targetSdkVersion 26
+versionCode 1
+versionName "1.0"
+}
+
+2.Could not find com.android.tools.build:aapt2:3.2.1-4818971.
+Android Studio升级到3.2.1后，运行项目报如下错：
+
+Could not find com.android.tools.build:aapt2:3.2.1-4818971.
+Searched in the following locations:
+    file:/D:/AndroidStudio/sdk/extras/m2repository/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971.pom
+    file:/D:/AndroidStudio/sdk/extras/m2repository/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971-windows.jar
+    file:/D:/AndroidStudio/sdk/extras/google/m2repository/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971.pom
+    file:/D:/AndroidStudio/sdk/extras/google/m2repository/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971-windows.jar
+    file:/D:/AndroidStudio/sdk/extras/android/m2repository/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971.pom
+    file:/D:/AndroidStudio/sdk/extras/android/m2repository/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971-windows.jar
+    https://jcenter.bintray.com/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971.pom
+    https://jcenter.bintray.com/com/android/tools/build/aapt2/3.2.1-4818971/aapt2-3.2.1-4818971-windows.jar
+Required by:
+    project :app
+ 
+
+解决方法很简单：
+
+在项目的build.gradle文件中，新增一行google()即可解决
+
+allprojects {
+    repositories {
+        jcenter()
+        google()//新增这一行
+    }
+}
+--------------------- 
+3.android出现这个undefined is not an object (evaluating 'RNFetchBlob.DocumentDir')
+https://www.cnblogs.com/details-666/p/react-native-fetch-blob.html
