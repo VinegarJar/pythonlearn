@@ -149,3 +149,10 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+/*
+*  android打包命令
+* react-native bundle --platform android --dev false --entry-file index.android.js \
+  --bundle-output android/app/src/main/assets/index.android.bundle \
+  --assets-dest android/app/src/main/res/
+*/
