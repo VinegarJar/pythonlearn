@@ -110,7 +110,7 @@ source={{ uri:
       <GiftedChat messages={this.state.messages}
         onSend={messages => this.onSend(messages)}
         user={{_id: 1  }} placeholder = {"请输入您的问题！"}
-        maxInputLength = {10}
+        maxInputLength = {10} 
       />
 
     );
@@ -121,6 +121,16 @@ source={{ uri:
     console.log("this.props.post=======>", this.props.post)
 
   }
+
+  inputToolbar  = () =>{
+     return(
+         <View style={{ backgroundColor:"orange",height:100,width:320}}>
+
+         </View>
+
+     );
+  }
+
 
 
 }
