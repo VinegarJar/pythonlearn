@@ -1,0 +1,7 @@
+1.https://github.com/ldiqual/tesseract-ios
+2.光学文字识别身份证 Optical Character Recognition https://github.com/xiaolanlianhua/OCR
+3.https://github.com/rcarlsen/Pocket-OCR
+4.https://github.com/cconstable/OCR-iOS-Example
+5.https://github.com/unseim/WYIDCardOCR
+6.光学文字识别-储蓄卡 https://github.com/BrooksWon/ocr_savingCard
+7.OCR：基于OpenCV和TesseractOCRiOS的银行卡号识别(2016年)https://github.com/zhangzhaopds/OCR_OpenCV_Tesseract_demo

@@ -1,0 +1,11 @@
+1.安装getstorybook，步骤非常简单，只需要运行命令
+npm i getstorybook --save-dev
+
+2.初始化getstorybook
+ getstorybook
+
+3.初始化getstorybook之后，接下来就可以启动storybook了
+npm run storybook
+
+4.启动模拟器
+npm run run-ios 或者运行Xcode或者是android 编译器、

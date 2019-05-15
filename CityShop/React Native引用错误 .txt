@@ -1,0 +1,63 @@
+
+1.Duplicate interface definition for class 'RCTView' 这个错误
+解决办法:#import "RCTView.h" 替换成 #import <React/RCTView.h>
+#import "RCTBridge.h"
+#import <React/RCTBridge.h>
+
+
+
+2.出现错误 ld: library not found for -lRNDeviceInfo-tvOS
+clang: error: linker command failed with exit code 1 (use -v to see invocation) 这个错误
+解决办法: 删掉这个库文件在
+
+
+3.出现问题解决Xcode中 RSKImageCropper.framework和QBImagePicker.framework报错问题
+http://blog.csdn.net/u013718120/article/details/72781285
+
+
+4.解决 Cannot synthesize weak property in file using manual reference counting 报错
+https://blog.csdn.net/weixin_41493577/article/details/78971962
+
+
+   "babel": {
+    "presets": ["react-native-stage-0"],
+  },
+
+
+
+
+5.objc-class-ref in 错误
+转载 2016年12月17日 10:20:08 3347
+1.把1.选中Targets—>Build Settings—>Architectures。
+
+把build active architectures only 改为 NO。
+
+2. 把最下面的Valid Architectures中的arm64参数删掉就可以了
+
+   或者：
+
+双击Architectures，选择other，删除$(ARCH_STANDARD)，然后增加armv7和armv7s（写上：$(ARCHS_STANDARD_32_BIT)）。
+
+3.clean 再build。
+
+结果设置如下图：
+
+20150123094721454.jpg
+
+
+
+ npm uninstall rxjs && npm install rxjs@5.5.0 解决rxjs 包错
+
+
+
+
+先前我在群里问的，xcode10升级后脚手架不能用的情况，我已经找到解决方法了。1.后面加版本号，最新版本会报错
+https://reactnative.cn/docs/getting-started.html
+react-native init MyApp —version 0.55.4
+2.报错继续，解决方法如下
+https://stackoverflow.com/questions/48019066/config-h-file-not-found-in-ios-project-of-react-native
+cd node_modules/react-native/third-party/glog-0.3.4/
+./configure
+3.报错继续，解决方法如下
+https://blog.csdn.net/levine_hhb/article/details/82819629
+
