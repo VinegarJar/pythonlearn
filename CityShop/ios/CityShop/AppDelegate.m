@@ -10,6 +10,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTDevLoadingView.h>
+#import <Bugly/Bugly.h>
 
 @implementation AppDelegate
 
