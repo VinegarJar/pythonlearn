@@ -30,7 +30,7 @@ const instructions = Platform.select({
 
 class App extends Component {
 
-
+//<Icon name={`oneIcon|${item.select? 'icon_check_fill':'icon_checkBox' }`} size={FS.ICON} color={CS.THEME11}/>
 
   //发送网络请求
   componentDidMount() {
