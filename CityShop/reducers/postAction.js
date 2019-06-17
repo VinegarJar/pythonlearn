@@ -1,6 +1,10 @@
 
 
 
+import PostTypes from "./postType";
+const  {GET_HOMEADVER } = PostTypes;
+
+
 //定义一个请求方法
 export  const  getHomeAdver = ()=> dispatch=>{
     console.log("getHomeAdver");
@@ -9,8 +13,8 @@ export  const  getHomeAdver = ()=> dispatch=>{
     .then((response)=>response.json())
     .then((posts)=>{
         dispatch({
-            type:"getHomeAdver",
-           payload:posts
+            type:GET_HOMEADVER,
+             data:posts
         })
 
     }).catch((error)=>{

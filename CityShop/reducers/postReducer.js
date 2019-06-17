@@ -1,23 +1,22 @@
 
+
+import PostTypes from "./postType";
+const  {GET_HOMEADVER } = PostTypes;
+
 //存储你想要的状态
 const initialState = {
-    item:{
-        
-    },
+    data:{},
 };
 
 export default function (state = initialState, action){
    
-   
-
-
     console.log("postReducer===========>", action)
     const { type,  } = action;
     switch (type) {
-        case "getHomeAdver":
+        case GET_HOMEADVER:
             return {
                 ...state,
-                item:action.payload
+                data:action.data
             }
             break;
     }

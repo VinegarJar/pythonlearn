@@ -41,7 +41,8 @@ class App extends Component {
     //  }).catch((error) => {
 
     //  });
-    // 请求网络数据this.props.getHomeAdver();
+    // 请求网络数据
+    this.props.getHomeAdver();
 
     // this.props.getHomeAdver().then((res) => {
     //   console.log("获取经营范围数据===============", res);
@@ -101,6 +102,8 @@ source={{ uri:
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages)
     }));
+
+    console.log("this.props.post=======>", this.props.post)
   }
 
 

@@ -22,12 +22,18 @@ import { Provider } from 'react-redux';
 //const store = createStore(reducer, applyMiddleware(thunk));
 
 import {store} from './redux/store'
+// import FetchHttpClient, { json } from 'fetch-http-client';
+
+//import 'pile/dist/styles/pile.min.css';
+// import Pile
+
+// import Button from 'pile/dist/components/button';
 
 export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-         <Chat/>
+         <AppStart/>
      </Provider>
     );
   }
