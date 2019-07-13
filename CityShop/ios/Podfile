@@ -2,15 +2,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'CityShop' do
-  pod 'AFNetworking', '~> 2.6'
-  pod  'MJRefresh', '~> 3.1.10'
   pod  'Bugly'
-  pod 'UMCCommon'
-  pod 'UMCSecurityPlugins'
-  pod 'UMCAnalytics'
-  pod 'UMCShare/UI'
-  pod 'UMCShare/Social/ReducedWeChat'
-  pod 'UMCShare/Social/ReducedQQ'
+
 end
 
 
