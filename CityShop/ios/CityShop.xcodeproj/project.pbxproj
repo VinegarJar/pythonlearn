@@ -43,14 +43,6 @@
 		B707517922D7544400589264 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = B707515022D7544400589264 /* main.jsbundle */; };
 		B707517A22D7544400589264 /* main.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = B707515122D7544400589264 /* main.jsbundle.meta */; };
 		B707519922D7545500589264 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B707519822D7545500589264 /* assets */; };
-		B766B12122D8645B00DA8CFF /* libexbankcardcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B766B0FA22D8645B00DA8CFF /* libexbankcardcore.a */; };
-		B766B17022D864B200DA8CFF /* BankCard.m in Sources */ = {isa = PBXBuildFile; fileRef = B766B16722D864B100DA8CFF /* BankCard.m */; };
-		B766B17122D864B200DA8CFF /* CameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B766B16822D864B200DA8CFF /* CameraManager.m */; };
-		B766B17222D864B200DA8CFF /* BankCardSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B766B16C22D864B200DA8CFF /* BankCardSearch.m */; };
-		B766B17322D864B200DA8CFF /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B766B16E22D864B200DA8CFF /* OverlayView.m */; };
-		B766B17422D864B200DA8CFF /* BankCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = B766B16F22D864B200DA8CFF /* BankCard.xib */; };
-		B766B17922D864B900DA8CFF /* RectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B766B17522D864B900DA8CFF /* RectManager.m */; };
-		B766B17A22D864B900DA8CFF /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = B766B17722D864B900DA8CFF /* UIImage+Extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -369,23 +361,6 @@
 		B707515022D7544400589264 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		B707515122D7544400589264 /* main.jsbundle.meta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle.meta; sourceTree = "<group>"; };
 		B707519822D7545500589264 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
-		B766B0F622D8645B00DA8CFF /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
-		B766B0F722D8645B00DA8CFF /* exbankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcard.h; sourceTree = "<group>"; };
-		B766B0F922D8645B00DA8CFF /* exbankcardcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbankcardcore.h; sourceTree = "<group>"; };
-		B766B0FA22D8645B00DA8CFF /* libexbankcardcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libexbankcardcore.a; sourceTree = "<group>"; };
-		B766B16722D864B100DA8CFF /* BankCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCard.m; sourceTree = "<group>"; };
-		B766B16822D864B200DA8CFF /* CameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraManager.m; sourceTree = "<group>"; };
-		B766B16922D864B200DA8CFF /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
-		B766B16A22D864B200DA8CFF /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
-		B766B16B22D864B200DA8CFF /* BankCardSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardSearch.h; sourceTree = "<group>"; };
-		B766B16C22D864B200DA8CFF /* BankCardSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardSearch.m; sourceTree = "<group>"; };
-		B766B16D22D864B200DA8CFF /* CameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraManager.h; sourceTree = "<group>"; };
-		B766B16E22D864B200DA8CFF /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
-		B766B16F22D864B200DA8CFF /* BankCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCard.xib; sourceTree = "<group>"; };
-		B766B17522D864B900DA8CFF /* RectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectManager.m; sourceTree = "<group>"; };
-		B766B17622D864B900DA8CFF /* RectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectManager.h; sourceTree = "<group>"; };
-		B766B17722D864B900DA8CFF /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
-		B766B17822D864B900DA8CFF /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
 		D39020EEFE3B4871A1175CFF /* libRNFetchBlob.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFetchBlob.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -407,7 +382,6 @@
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
-				B766B12122D8645B00DA8CFF /* libexbankcardcore.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
@@ -537,8 +511,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				B766B16622D864A700DA8CFF /* bank */,
-				B766B0F422D8645B00DA8CFF /* Release-iphoneos */,
 				B707519822D7545500589264 /* assets */,
 			);
 			name = CityShop;
@@ -682,53 +654,6 @@
 				B7483A772286B4EE009099EB /* libRNFetchBlob.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B766B0F422D8645B00DA8CFF /* Release-iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				B766B0F522D8645B00DA8CFF /* include */,
-				B766B0FA22D8645B00DA8CFF /* libexbankcardcore.a */,
-			);
-			path = "Release-iphoneos";
-			sourceTree = "<group>";
-		};
-		B766B0F522D8645B00DA8CFF /* include */ = {
-			isa = PBXGroup;
-			children = (
-				B766B0F622D8645B00DA8CFF /* BankCard.h */,
-				B766B0F722D8645B00DA8CFF /* exbankcard.h */,
-				B766B0F822D8645B00DA8CFF /* exbankcardcore */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		B766B0F822D8645B00DA8CFF /* exbankcardcore */ = {
-			isa = PBXGroup;
-			children = (
-				B766B0F922D8645B00DA8CFF /* exbankcardcore.h */,
-			);
-			path = exbankcardcore;
-			sourceTree = "<group>";
-		};
-		B766B16622D864A700DA8CFF /* bank */ = {
-			isa = PBXGroup;
-			children = (
-				B766B17622D864B900DA8CFF /* RectManager.h */,
-				B766B17522D864B900DA8CFF /* RectManager.m */,
-				B766B17822D864B900DA8CFF /* UIImage+Extend.h */,
-				B766B17722D864B900DA8CFF /* UIImage+Extend.m */,
-				B766B16922D864B200DA8CFF /* BankCard.h */,
-				B766B16722D864B100DA8CFF /* BankCard.m */,
-				B766B16B22D864B200DA8CFF /* BankCardSearch.h */,
-				B766B16C22D864B200DA8CFF /* BankCardSearch.m */,
-				B766B16F22D864B200DA8CFF /* BankCard.xib */,
-				B766B16D22D864B200DA8CFF /* CameraManager.h */,
-				B766B16822D864B200DA8CFF /* CameraManager.m */,
-				B766B16A22D864B200DA8CFF /* OverlayView.h */,
-				B766B16E22D864B200DA8CFF /* OverlayView.m */,
-			);
-			path = bank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1195,7 +1120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				B766B17422D864B200DA8CFF /* BankCard.xib in Resources */,
 				B707519922D7545500589264 /* assets in Resources */,
 				B707517922D7544400589264 /* main.jsbundle in Resources */,
 				B707517A22D7544400589264 /* main.jsbundle.meta in Resources */,
@@ -1254,16 +1178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CityShop/Pods-CityShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -1278,15 +1198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CityShop-checkManifestLockResult.txt",
 			);
@@ -1300,15 +1216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CityShop/Pods-CityShop-resources.sh",
 				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
@@ -1332,14 +1244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B766B17222D864B200DA8CFF /* BankCardSearch.m in Sources */,
-				B766B17322D864B200DA8CFF /* OverlayView.m in Sources */,
-				B766B17922D864B900DA8CFF /* RectManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				B766B17122D864B200DA8CFF /* CameraManager.m in Sources */,
-				B766B17022D864B200DA8CFF /* BankCard.m in Sources */,
-				B766B17A22D864B900DA8CFF /* UIImage+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1451,7 +1357,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
+				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = JR453H2A98;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -1489,6 +1395,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = JR453H2A98;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
