@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
   RN 项目需要 Dead Code Stripping  设置为yes
- 
+   pod  'Bugly'
  */
 
 #import "AppDelegate.h"
@@ -12,7 +12,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTDevLoadingView.h>
-#import <Bugly/Bugly.h>
+
 
 
 

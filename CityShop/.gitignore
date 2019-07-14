@@ -52,5 +52,10 @@ buck-out/
 */fastlane/Preview.html
 */fastlane/screenshots
 
+
 # Bundle artifact
 *.jsbundle
+#https://www.jianshu.com/p/c9c525e0c25f 移除项目中的cocoapods
+
+#CocoaPods
+Pods/
