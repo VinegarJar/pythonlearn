@@ -1,0 +1,9 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'CityShop' do
+  pod 'Firebase/CoreOnly'
+  pod 'Firebase/MLVision'
+  pod 'Firebase/MLVisionTextModel'
+  pod  'Bugly'
+end
