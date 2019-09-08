@@ -1179,7 +1179,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CityShop/Pods-CityShop-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CityShop/Pods-CityShop-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -1188,7 +1188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityShop/Pods-CityShop-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CityShop/Pods-CityShop-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4DE07C5A3C21C268E0F8A54 /* [CP] Embed Pods Frameworks */ = {
@@ -1197,7 +1197,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CityShop/Pods-CityShop-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CityShop/Pods-CityShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -1214,7 +1214,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CityShop/Pods-CityShop-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CityShop/Pods-CityShop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7124EB7861E15F1637FB01F /* [CP] Check Pods Manifest.lock */ = {

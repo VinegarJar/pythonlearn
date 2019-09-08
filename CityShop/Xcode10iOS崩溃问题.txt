@@ -1,0 +1,6 @@
+1.出现了malloc: Heap corruption detected, free list is damaged at 0x283cd71a0
+*** Incorrect guard value: 31796912222464
+ryp_rn_supplier(2095,0x16d72f000) malloc: *** set a breakpoint in malloc_error_break to debug  崩溃问题
+
+解决方式 解决办法：在Capabilities->Access WiFi Information中，打开ON选项
+(https://www.jianshu.com/p/510ea00cfaf0)

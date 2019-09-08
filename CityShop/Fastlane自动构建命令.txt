@@ -214,4 +214,7 @@ platform :ios do
     firim(firim_api_token: "ff0c0cf598bac421fac4d9089d126ef4") 
   end
 end
+
+
+react-native-webview
 　　　　　

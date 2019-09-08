@@ -129,13 +129,13 @@ export default class chat extends React.Component {
   }
 
   renderCustomActions(props) {
-    if (Platform.OS === 'ios') {
-      return (
-        <View style={{ backgroundColor:"red",height:50,width:50}}>
+    // if (Platform.OS === 'ios') {
+    //   return (
+    //     <View style={{ backgroundColor:"red",height:50,width:50}}>
 
-        </View>
-      );
-    }
+    //     </View>
+    //   );
+    // }
     const options = {
       'Action 1': (props) => {
         alert('option 1');
@@ -214,11 +214,12 @@ export default class chat extends React.Component {
           _id: 1, // sent messages should have same user._id
         }}
 
-        renderActions={this.renderCustomActions}
+        // renderActions={this.renderCustomActions}
         renderBubble={this.renderBubble}
         renderSystemMessage={this.renderSystemMessage}
         renderCustomView={this.renderCustomView}
         renderFooter={this.renderFooter}
+        maxInputLength= {100}
       />
     );
   }
