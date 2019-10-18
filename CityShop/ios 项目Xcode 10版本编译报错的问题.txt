@@ -1,8 +1,53 @@
 react-native 升级Xcode10 遇到的问题汇总
 https://cloud.tencent.com/developer/article/1405978
 
+问题一third-party: 'config.h' file not found
 https://blog.csdn.net/youshaoduo/article/details/86232248（third-party: 'config.h' file not found）
+如果你已经下载好了需要的四个库，那么请直接略过这一段：{
+
+ rm -rf node_modules/ && yarn cache clean && yarn install and rm -rf ~/.rncache
+cd node_modules/react-native/scripts
+./ios-install-third-party.sh
+
+
+}
+
+{
+If your network is slow, you can download the packages separately and move them to the rncache folder
+
+folly-2016.10.31.00
+double-conversion-1.1.5
+glog-0.3.4
+boost_1_63_0
+
+}
+如果已经有了上面的四个库，那么直接从这里开始
+1    cd <Your-Project-Folder>/node_modules/react-native/third-party/glog-0.3.4
+2   ./configure
+3   Xcode Clean & Build
+
+
+
+
+问题二'__rip' in '__darwin_arm_thread_state64
 https://blog.csdn.net/youshaoduo/article/details/86231961 (No member named '__rip' in '__darwin_arm_thread_state64)
+打开node_modules/react-native/third-party/glog-0.3.4/src/config.h文件
+或者直接在工程中搜PC_FROM_UCONTEXT定义的地方。
+
+替换
+/* How to access the PC from a struct ucontext */
+#define PC_FROM_UCONTEXT uc_mcontext->__ss.__rip
+为：
+/* How to access the PC from a struct ucontext */
+#if defined(__arm__) || defined(__arm64__)
+#define PC_FROM_UCONTEXT uc_mcontext->__ss.__pc
+#else
+#define PC_FROM_UCONTEXT uc_mcontext->__ss.__rip
+#endif
+
+
+
+
 https://cloud.tencent.com/developer/article/1405978(error：Build input file cannot be found：‘/Users/.../Libraries/WebSocket/libfishhook.a’__)
 
 /clang:-1: no such file or directory: '/Users/ryp-app01/Library/Developer/Xcode/DerivedData/ryp_rn_supplier-aebffqfnvvoilwhedxphuqiumsvh/Build/Products/Debug-appletvos/libBVLinearGradient.a'
