@@ -1,19 +1,22 @@
-from urllib import request, parse
-   
-#这里我们通过 个参数构造了一个请求，其中 url 即请求 URL, headers 中指定了 User-AgentHost ，参数 data urlencode （）和 bytes （）方法转成字节流 另外，指定了请求方式为 POST   
-url = 'http://httpbin.org/post'
+from urllib.request import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler, build_opener 
+from urllib.error import URLError   
+#输入用户名和密码，验证成功后才能查看页面，
+#这里首先实例 HTTPBasicAuthHandler 对象，其参数是 HTTPPasswordMgrWithDefaultRealm 对象，它利用 ad _password （）添加进去用户名和密码，这样就建立了一个处理验证的 Handler
 
-headers = {
-    'User-Agent':'Mozilla/4.0 (compatible; MSIE S. S; Windows NT)', 
-     'Host':'httpbin.org'
-}
+username = 'username' 
+password = 'password'
+url = 'http: //localhost:sooo/'
 
-dict = {
-    'name':'Germey'
-}
+p = HTTPPasswordMgrWithDefaultRealm() 
+p.add_password(None, url, username , password) 
+auth_handler = HTTPBasicAuthHandler(p) 
+opener = build_opener(auth_handler)
 
-data= bytes(parse.urlencode(dict), encoding='utf8') 
-req = request.Request(url=url, data=data, method='POST') 
-req.add_header('User-Agent', 'Mozilla/4.0 (compatible; MSIE S. S; Windows NT)')
-response = request.urlopen(req) 
-print(response. read(). decode('utf8'))
+
+try:
+    result = opener.open(url)
+    html = result.read(). decode('utf8')
+    print('html=',html) 
+except URLError as e:
+     print('TIME OUT',e.reason) 
+
