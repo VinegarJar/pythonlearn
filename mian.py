@@ -1,22 +1,18 @@
-from urllib.request import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler, build_opener 
-from urllib.error import URLError   
-#输入用户名和密码，验证成功后才能查看页面，
-#这里首先实例 HTTPBasicAuthHandler 对象，其参数是 HTTPPasswordMgrWithDefaultRealm 对象，它利用 ad _password （）添加进去用户名和密码，这样就建立了一个处理验证的 Handler
 
-username = 'username' 
-password = 'password'
-url = 'http: //localhost:sooo/'
-
-p = HTTPPasswordMgrWithDefaultRealm() 
-p.add_password(None, url, username , password) 
-auth_handler = HTTPBasicAuthHandler(p) 
-opener = build_opener(auth_handler)
+from urllib.parse import urlparse, urlunparse
 
 
-try:
-    result = opener.open(url)
-    html = result.read(). decode('utf8')
-    print('html=',html) 
-except URLError as e:
-     print('TIME OUT',e.reason) 
+#这里该方法可以实现 RL 的识别和分段，这里先用一个实例来看一下： 
+url = 'https://www.baidu.com/index.htm;user?id=S#comment'
+response= urlparse(url, scheme='https') 
+print ('以实现 RL 的识别和分段',type(response),response)
 
+result = urlparse ('http://www.baidu.com/index.html#comment', allow_fragments=False) 
+#可以发现 URL 不包含 params query 时， fragment 便会被解析为 path 的一部分
+#ParseResult(scheme='http', netloc='www.baidu.com', path='/index.html#comment', params='', query='', fragment='')
+print(result)
+print(result.scheme,'\n', result[0],'\n', result.netloc,'\n', result[1])
+
+#编码urlunparse
+data =['http','www.baidu com','index.html', 'user', 'a=6', 'comment'] 
+print("编码urlunparse",urlunparse(data))
